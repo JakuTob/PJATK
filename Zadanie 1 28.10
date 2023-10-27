@@ -1,0 +1,35 @@
+// ConsoleApplication1.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int poczatek, koniec;
+
+    cout << "Poczatek zakresu to" << endl;
+        cin >> poczatek;
+    cout << "Koniec zakresu to" << endl;
+        cin >> koniec;
+    cout << "Twoje liczby liczba w podanym zakresie to" << endl;
+
+    for (int liczba = poczatek; liczba <= koniec; liczba++)
+    {
+
+        bool czyPierwsza = true;
+
+        for (int i = 2; i < liczba; i++) 
+        {
+            if (liczba % i == 0) 
+            {
+                czyPierwsza = false;
+            }
+        }
+            if (czyPierwsza && liczba > 1) 
+            {
+            cout << liczba << endl;
+            }
+    }
+    return 0;
+}
+// Zadanie 1 Napisz program, który napisze na ekranie wszystkie liczby pierwsze z zadanego zakresu.
