@@ -1,0 +1,52 @@
+// ConsoleApplication3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+	int pick;
+   cout << "Siemka gramy w kamien papier nozyce wybierz swoj pick\n 1-kamien, 2-papier, 3-nozyce \n";
+   cin >> pick;
+   switch (pick)
+   {
+   case 1:
+	   cout << "Wybrales kamien \n";
+	   break;
+   case 2:
+	   cout << "Wybrales papier \n";
+	   break;
+   case 3: 
+	   cout << "wybrales nozyce \n";
+	   break;
+   }
+   srand(time(NULL));
+   int x = rand() % 3;
+   switch (x)
+   {
+   case 0:
+	   cout << "Ja wybralem kamien \n";
+	   break;
+   case 1:
+	   cout << "Ja wybralem papier \n";
+	   break;
+   case 2:
+	   cout << "Ja wybralem nozyce \n";
+	   break;
+   }
+   if (pick==1 && x==0||pick==2 && x==1||pick==3 && x==2)
+   {
+	   cout << "Mamy remis";
+   }
+   if (pick == 1 && x == 1 || pick == 2 && x == 2|| pick == 3 && x == 0) {
+	   cout << " Wygralem, cienias hehe";
+   }
+   if (pick == 1 && x == 2 || pick == 2 && x == 0 || pick == 3 && x == 1)
+   {
+	   cout << "Udalo ci sie na farcie";
+   }
+}
+
+// Cw 3 Zadanie 3
