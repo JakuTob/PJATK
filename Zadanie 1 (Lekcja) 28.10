@@ -1,0 +1,24 @@
+// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int pierwszy, roznica, liczbael,wynik = 0;
+    cout << "Podaj pierwszy element twojego ciagu arytmetycznego\n";
+    cin >> pierwszy;
+    cout << "Podaj roznice twojego ciagu arytmetycznego \n";
+    cin >> roznica;
+    cout << "Podaj ile elementow ma miec twoj ciag \n";
+    cin >> liczbael;
+
+    for (int i = liczbael; i > 0; i--) 
+    {
+        pierwszy += roznica;
+        wynik += pierwszy;
+    }
+    cout << "Suma twojego ciagu to" << wynik;
+}
+
+// Cw 3 Zad 1
