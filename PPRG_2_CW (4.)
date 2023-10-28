@@ -1,0 +1,16 @@
+// ConsoleApplication6.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int podstawa, wykladnik, wynik;
+   cout << "Podaj podstawe\n";
+   cin >> podstawa;
+   cout << "Podaj wykladnik\n";
+   cin >> wykladnik;
+   wynik = pow(podstawa, wykladnik);
+   cout << "Wynik potegowania twoich liczb to " << wynik;
+}
+// PPRG_2_CW (4.)
