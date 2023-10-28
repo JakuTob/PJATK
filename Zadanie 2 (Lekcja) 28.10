@@ -1,0 +1,28 @@
+// ConsoleApplication2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string haslo = "maslo";
+    string odpowiedz;
+    int wynik = 0;
+    cout << "Podaj swoj guess cowboy \n";
+    cin >> odpowiedz;
+    if (odpowiedz.compare(haslo) == 0) 
+    {
+       cout << "To poprawna odpowiedz, brawo haslo to " << haslo;
+    }
+    else
+    {
+        cout << "Nie tym razem, moze nastepnym sie uda \n";
+    }
+
+ 
+    
+    
+       
+    
+}
+//Cw3 Zad 3
