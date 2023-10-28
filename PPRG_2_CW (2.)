@@ -1,0 +1,20 @@
+// ConsoleApplication5.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int wysokosc;
+cout << "Jak duzy chcesz ten trojkat z gwiazdeczek? Ile pieter?\n";
+cin >> wysokosc;
+    for (int i = wysokosc; i > 0; i--)
+    {
+        for (int j = i; j > 0 ; j--)
+            cout << "*";
+        cout << "\n";
+    }
+    cout << "Odwrocony trojkacik for ya";
+}
+
+// PPRG_2_CW (2.)
