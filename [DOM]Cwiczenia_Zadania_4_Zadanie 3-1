@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+double a1, rq, an, sn;
+int n;
+void Arytmetyczna() 
+{
+	an = a1 + (n - 1) * rq;
+	sn = ((a1 + an) / 2) * n;
+	cout << "Suma twojego ciagu arytmetycznego to \n" << sn << "\n";
+	return;
+}
+void Geometryczna() 
+{
+	an = a1*pow(rq,n-1);
+	if (rq == 1) 
+	{
+		sn = a1 * n;
+	}
+	else 
+	{
+		sn = a1 * ((1 - pow(rq, n)) / (1-rq));
+	}
+	cout << "Suma twojego ciagu geometrycznego to \n" << sn ;
+		return;
+}
+int main()
+{
+cout << "Podaj mi swoje trzy liczby,a oblicze dla ciebie sume ciagu arytmetycznego i geometrycznego, beda one kolejno:\nPierwszym wyrazem ciagu\nRoznica/ilorazem ciagu\nLiczba elementow ciagu\n";
+cin >> a1 >> rq >> n;
+Arytmetyczna();
+Geometryczna();
+return 0;
+}
+//Cwiczenia_Zadania_4_Zadanie 3-1
