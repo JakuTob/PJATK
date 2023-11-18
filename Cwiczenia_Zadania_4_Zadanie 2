@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+/*
+int NWD(int a, int b)
+{
+    int temp;
+
+    while (b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    return a;
+}
+
+int main()
+{
+    int a, b;
+    cout << "Podaj dwie liczby: \n";
+    cin >> a >> b;
+    cout << "Najwiekszy wspolny dzielnik dla liczb " << a << " i " << b << " wynosi " << NWD(a, b) << endl;
+
+    return 0;
+}
+*/
+// Powyżej rozwiązanie algorytmu Euklidesa iteracyjnie
+
+/*
+int NWD(int a, int b)
+{
+    if (b != 0)
+        return NWD(b, a % b);
+
+    return a;
+}
+
+int main()
+{
+    int a, b;
+    cout << "Podaj dwie liczby: \n";
+    cin >> a >> b;
+    cout << "Najwiekszy wspolny dzielnik dla liczb " << a << " i " << b << " wynosi " << NWD(a, b) << endl;
+
+    return 0;
+}
+*/
+// Powyżej rozwiązanie algorytmu Euklidesa rekurencyjnie
