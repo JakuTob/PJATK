@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+const int WYM1 = 2; 
+const int WYM2 = 3;
+const int WYM3 = 2; //const przy intach bo wyrzucalo ze potrzebuje stalej wartosci
+
+int macierzA[WYM1][WYM2] = 
+{
+    {1, 2, 3},
+    {7, 8, 9}
+};
+int macierzB[WYM2][WYM3] = 
+{
+    {4, 2},
+    {0, 5},
+    {1, 0}
+};
+int result[WYM1][WYM3];
+
+void Mnozenie() {
+  for (int i = 0; i < WYM1; i++) 
+  {
+  for (int j = 0; j < WYM3; j++) 
+  {
+  int value = 0;
+  for (int k = 0; k < WYM2; k++) 
+  {
+  value += macierzA[i][k] * macierzB[k][j];
+  }
+  result[i][j] = value;
+  }
+  }
+  }
+
+int main() {
+    Mnozenie();
+    cout << "Wynik:" << endl;
+    for (int i = 0; i < WYM1; i++) 
+    {
+    for (int j = 0; j < WYM3; j++) 
+    {
+    cout << result[i][j] << " ";
+    }
+    cout << endl;
+    }
+
+    return 0;
+}
