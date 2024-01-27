@@ -1,0 +1,58 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+//8
+//Nie da się, ponieważ wykonałem tylko te podpunkty które pokazały mi się w głowie w momencie pisania
+
+//1
+struct Osoba {
+    string imie;
+    string nazwisko;
+    int wiek;
+};
+
+//2
+Osoba tablica[] = { {"Jakub", "Tobias", 23}, {"Jan", "Kowalski", 30}, {"Donald", "Trump", 50}, {"Karol", "Nowak", 25} };
+int Elementy = sizeof(tablica) / sizeof(Osoba);
+
+bool sortownia(Osoba const a, Osoba const b) {
+    if (a.nazwisko != b.nazwisko) return a.nazwisko < b.nazwisko;
+    if (a.imie != b.imie) return a.imie < b.imie;
+    return a.wiek < b.wiek;
+}
+
+void sortuj() {
+    sort(tablica, (tablica + Elementy), sortownia);
+}
+
+//4
+void nieStarsze(int wiekGraniczny) {
+    for (int i = 0; i < Elementy; i++) {
+        if (tablica[i].wiek < wiekGraniczny)
+            cout << "Imie: " << tablica[i].imie << " Nazwisko: " << tablica[i].nazwisko << " Wiek: " << tablica[i].wiek << endl;
+    }
+}
+
+//5
+void Dane() {
+    cout << "Wprowadz liczbe:" << endl;
+    int liczba = 0;
+    cin >> liczba;
+    Osoba elementy[liczba];
+    for (int i = 0; i < liczba; i++) {
+    cout << "Wprowadz element o indeksie " << i << ":" << endl;
+    cout << "Imie: ";
+    cin >> elementy[i].imie;
+    cout << "Nazwisko: ";
+    cin >> elementy[i].nazwisko;
+    cout << "Wiek: ";
+    cin >> elementy[i].wiek;
+    }
+    cout << endl << endl;
+    for (int i = 0; i < liczba; i++) {
+        cout << "Imie: " << elementy[i].imie << " Nazwisko: " << elementy[i].nazwisko << " Wiek: " << elementy[i].wiek << endl;
+    }
+}
+
+
