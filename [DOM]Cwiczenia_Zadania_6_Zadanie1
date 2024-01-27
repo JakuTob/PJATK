@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct Punkt 
+{
+    double x;
+    double y;
+};
+double Dystans(Punkt p1, Punkt p2) 
+{
+    return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
+}
+int main() 
+{
+    Punkt p1 = { 2, 1 };
+    Punkt p2 = { 3, 7 };
+    Punkt p3 = { 1, 4 };
+    Punkt p4 = { 0, 6 };
+    cout << "Odleglosci miedzy danymi punktami wynosi:" << endl;
+    cout << "p1->p2: " << Dystans(p1, p2) << endl;
+    cout << "p1->p3: " << Dystans(p1, p3) << endl;
+    cout << "p1->p4: " << Dystans(p1, p4) << endl;
+    cout << "p2->p3: " << Dystans(p2, p3) << endl;
+    cout << "p2->p4: " << Dystans(p2, p4) << endl;
+    cout << "p3->p4: " << Dystans(p3, p4) << endl;
+
+    return 0;
+}
