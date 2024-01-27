@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+int tablica[10] = { 67,58,36,98,90,90,72,8,21,99 };
+int potrzebne(int start, int koniec)
+{
+    int przed = tablica[start];
+    int teraz = 0;
+    for (int i = start + 1; i <= koniec; i++) 
+    {
+        if (tablica[i] <= przed)
+        teraz++;
+    }
+    int cos = start + teraz;
+    swap(tablica[cos], tablica[start]);
+    int i = start, j = koniec;
+    while (i < cos && j > cos) 
+    {
+    while (tablica[i] <= przed) 
+    {
+        i++;
+    }
+    while (tablica[j] > przed) 
+    {
+        j--;
+    }
+    if (i < cos && j > cos) 
+    {
+        swap(tablica[i++], tablica[j--]);
+    }
+    }
+    return cos;
+}
+
+void Sortowanie(int start, int koniec)
+{
+if (start >= koniec) 
+{
+    return;
+}
+int p = potrzebne(start, koniec);
+Sortowanie(start, p - 1);
+Sortowanie(p + 1, koniec);
+}
+
+int main() 
+{
+int n = sizeof(tablica) / sizeof(int);
+Sortowanie(0, n - 1);
+for (int i = 0; i < n; i++) 
+{
+    cout << tablica[i] << " ";
+}
+cout << endl;
+return 0;
+}
